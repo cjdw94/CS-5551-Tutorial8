@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <ul>
+    <li><a class="nav-link" routerLink="/" routerLinkActive="active">Home</a>  </li>
+    <li><a class="nav-link" routerLink="user-details" routerLinkActive="active" *ngIf="authService.logIn">Profile</a>  </li>
+    <li style="float:right" > <a class="nav-link"  style="float:right" routerLink="login" routerLinkActive="active" *ngIf="!authService.logIn">Login</a> </li>
+    <li style="float:right" > <a class ="nav-link" (click)="logout()" href="#" *ngIf="authService.logIn">Logout</a>  </li>
+  </ul>
+</div>
+<router-outlet></router-outlet>
+<div class="text-center">
+  <p>
+    Angular 6 Authentication with JWT Tutorial
+  </p>
+</div>
