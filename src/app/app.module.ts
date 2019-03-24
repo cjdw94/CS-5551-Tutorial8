@@ -6,24 +6,21 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot([
-      { path: '', redirectTo: '/', pathMatch: 'full' },
-      { path: 'login', component: LoginComponent },
-      { path: 'profile', component: UserDetailsComponent }
-    ]),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

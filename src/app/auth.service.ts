@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -17,7 +17,7 @@ export class AuthService {
     this.http.post(this.uri + '/authenticate', {email: Email, password: Password})
       .subscribe((resp: any) => {
 
-        this.router.navigate(['profile']);
+        this.router.navigate(['user-details']);
         localStorage.setItem('auth_token', resp.token);
       });
       }
